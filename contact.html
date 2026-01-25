@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontakt – HawkCoding</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --bg-soft: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #22c55e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Inter, sans-serif;
+      background: radial-gradient(circle at top, #0f172a, var(--bg));
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    nav {
+      padding: 30px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    nav a {
+      color: var(--muted);
+      margin-left: 30px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    main {
+      padding: 80px 10%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    p {
+      color: var(--muted);
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    .info {
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .info strong {
+      color: var(--text);
+    }
+
+    form {
+      background: linear-gradient(180deg, #0f172a, #020617);
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    label {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 6px;
+      color: var(--muted);
+    }
+
+    input, textarea {
+      width: 100%;
+      background: #020617;
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--text);
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-family: Inter, sans-serif;
+      margin-bottom: 20px;
+      resize: none;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    button {
+      background: var(--accent);
+      color: #052e16;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(34,197,94,0.3);
+    }
+
+    footer {
+      padding: 40px 10%;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 80px;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Hawk<span>Coding</span></div>
+    <div>
+        <a href="index.html">About</a>
+        <a href="#">Technologie</a>
+        <a href="#">Projekty</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="/lab">Lab</a>
+    </div>
+  </nav>
+
+  <main>
+    <div>
+      <h1>Skontaktuj się<br><span>z nami</span></h1>
+      <p>
+        Masz projekt, pomysł lub potrzebujesz wsparcia technicznego?
+        Opisz krótko swój problem – odezwiemy się.
+      </p>
+
+
+
+    <!-- WERSJA DZIAŁAJĄCA OD RAZU -->
+    <form action="mailto:jakubjdevel@gmail.com" method="post" enctype="text/plain">
+      <label>Imię i nazwisko</label>
+      <input type="text" name="name" required />
+
+      <label>Email</label>
+      <input type="email" name="email" required />
+
+      <label>Wiadomość</label>
+      <textarea name="message" rows="6" required></textarea>
+
+      <button type="submit">Wyślij wiadomość</button>
+    </form>
+  </main>
+
+  <footer>
+    © 2026 HawkCoding · Jan Jastrzębski Development · NIP 5213845215
+  </footer>
+
+</body>
+</html>
